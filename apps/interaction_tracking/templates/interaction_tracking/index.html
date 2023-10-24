@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interaction Tracking</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Interaction Tracking</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Contact</th>
+                    <th>Interaction</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for interaction in interactions %}
+                <tr>
+                    <td>{{ interaction.contact }}</td>
+                    <td>{{ interaction.interaction }}</td>
+                    <td>{{ interaction.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

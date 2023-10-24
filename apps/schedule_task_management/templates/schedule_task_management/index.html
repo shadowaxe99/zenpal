@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule and Task Management</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Schedule and Task Management</h1>
+    <div id="taskContainer">
+        {% for task in tasks %}
+            <div class="task">
+                <h2>{{ task.title }}</h2>
+                <p>{{ task.description }}</p>
+                <p><strong>Due date:</strong> {{ task.due_date }}</p>
+                <p><strong>Status:</strong> {{ task.status }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
